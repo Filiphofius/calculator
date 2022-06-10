@@ -11,11 +11,49 @@
 }
 
 // Demonstration
-
+html{
+    height:100%;
+}
 body {
     .vendor(transition, all 200ms ease-in);
-    &:hover {
-        color: @blue;
+    
+    background:rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    display:flex;
+    flex-direction: column;
+    flex:1 1 auto;
+    height:100%;
+    margin: 0;
+    .top-panel{
+        padding-left:20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width:100%;
+        height:50px;
+        background-color:blue;
+        .logo{
+            padding-right: 20px;
+            font-size: 30pt;
+            color:orange;
+
+        }
+        display:flex;
+        align-items:center;
+        justify-content: flex-start;
     }
-    background:green;
-}
+    .content{
+        display:flex;
+        flex-direction: row;
+        flex:1 1 auto;
+    }
+    .side-part{
+        background-color:grey;
+        width:28%
+        }
+    }
+    
+    .main-part{
+        background-color:rgb(200, 200, 200);
+        width:100%;
+    }
