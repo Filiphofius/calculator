@@ -50,10 +50,42 @@ body {
     .side-part{
         background-color:grey;
         width:28%
-        }
     }
     
     .main-part{
         background-color:rgb(200, 200, 200);
         width:100%;
+        padding-left: 35%;
+        padding-top: 50px;
+        font-size: large;
+        .input{
+            background-color:rgb(88, 255, 88);
+            height:30px;
+            width:97px;
+        }
+        .submit-button{
+            background-color:rgb(255, 0, 0); 
+            height:30px;
+            width:50px;
+        }
+        .operator{
+            background-color: orange;
+            height: 50px;
+            width: 50px;
+        }
+        .equals{
+            background-color: aquamarine;
+            padding: 0;
+            height:50px;
+            width:105px;
+        }
     }
+}
+
+@media screen and (max-width: 769px) {
+    .side-part{
+        .link-text{
+            display: none;
+        }
+    }
+}

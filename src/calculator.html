@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script src="main.bundle.js"></script>
     <title>Praktikum</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,18 +26,27 @@
         <div class="side-part">
             <ul>
                 <li>
-                    <a href="calculator.html"><i class="las la-car"></i><span class="link-text">Auto.de</span></a>
+                    <a href="index.html"><i class="las la-car"></i><span class="link-text">Auto.de</span></a>
                 </li>
                 <li>
-                    <a href="https://fressnapf.de"><i class="las la-dog"></i><span class="link-text">Fressnapf.de</span></a>
-                </li>
+                    <a href="https://fressnapf.de"><i class="las la-dog"></i><span class="link-text">Fressnapf.de</span></a> 
                 <li>
                     <i class="las la-chart-line"></i>
                 </li>
             </ul>
         </div>
         <div class="main-part">
-            Mainpart
+            <div class="calculator">
+            Calculator
+            <br>
+            <input class="input" type="number" name="inputs" size="10">
+            <br>
+            <input class="operator" type="button" value="+" onclick="setOperation('plus')">
+            <input class="operator" type="button" value="-" onclick="setOperation('minus')"><br>
+            <input class="operator" type="button" value="*" onclick="setOperation('mal')">
+            <input class="operator" type="button" value="/" onclick="setOperation('geteilt')"><br>
+            <input class="equals" type="button" value="=" onclick="calculate()">
+            </div>
         </div>
     </div>
 

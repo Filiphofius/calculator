@@ -73,7 +73,11 @@ function getHtmlWebpackPluginOpt(env) {
 function getPlugins(env) {
     const plugins = [
         new HtmlWebpackPlugin(getHtmlWebpackPluginOpt(env)),
-        new HtmlWebpackInlineSourcePlugin()
+        new HtmlWebpackInlineSourcePlugin(),
+        new HtmlWebpackPlugin({
+            template: './src/calculator.html',
+            filename: 'calculator.html'
+          })
     ];
     return plugins;
 }
