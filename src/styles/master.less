@@ -37,7 +37,6 @@ body {
             padding-right: 20px;
             font-size: 30pt;
             color:orange;
-
         }
         display:flex;
         align-items:center;
@@ -101,5 +100,21 @@ body {
         .link-text{
             display: none;
         }
+    }
+    .main-part{
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .calculator{
+            display: grid;
+            grid-template-columns: 75px 75px 75px 75px !important;
+            grid-template-rows: 75px 75px 75px 75px 75px !important;
+            grid-gap: 1px !important;
+        }
+    }
+    .logo{
+        font-size: 20pt !important;
     }
 }
