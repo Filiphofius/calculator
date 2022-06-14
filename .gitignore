@@ -133,7 +133,7 @@ typings/
 
 # webpack build output
 build
-public
+#public
 
 ### Windows ###
 # Windows thumbnail cache files
