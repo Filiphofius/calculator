@@ -8,6 +8,14 @@ window.setOperation = (operationName) =>{
     window.operation = operationName
     document.querySelector("input.input").value = null;
 }
+window.setScreen = (screenName) =>{
+    if(screenName == 'clear'){
+    document.querySelector("input.input").value = null;
+    value = null;
+    value2 = null;
+    }
+    else{}
+}
 window.setNumber = (numberName)=>{
     document.querySelector("input.input").value = document.querySelector("input.input").value + numberName
     window.value2 = parseInt(document.querySelector("input.input").value)
