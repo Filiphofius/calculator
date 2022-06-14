@@ -8,18 +8,23 @@ window.setOperation = (operationName) =>{
     window.operation = operationName
     document.querySelector("input.input").value = null;
 }
+window.setNumber = (numberName)=>{
+    document.querySelector("input.input").value = document.querySelector("input.input").value + numberName
+    window.value2 = parseInt(document.querySelector("input.input").value)
+    console.log(window.value2)
+}
 window.calculate = () =>{
-    const value2 = parseInt(document.querySelector("input.input").value)
     let result = null;
     switch (window.operation){
-        case "plus": result = window.value + value2;
+        case "plus": result = window.value + window.value2;
         break;
-        case "minus": result = window.value - value2;
+        case "minus": result = window.value - window.value2;
         break;
-        case "mal": result = window.value * value2;
+        case "mal": result = window.value * window.value2;
         break;
-        case "geteilt": result = window.value / value2;
+        case "geteilt": result = window.value / window.value2;
         break;
     }
     document.querySelector("input.input").value = result
+    window.value = result
 }
