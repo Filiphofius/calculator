@@ -15,15 +15,13 @@ html{
     height:100%;
 }
 body {
-    .vendor(transition, all 200ms ease-in);
-    
-    background:rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    display:flex;
-    flex-direction: column;
-    flex:1 1 auto;
-    height:100%;
-    margin: 0;
+    // background:rgb(255, 255, 255);
+     font-family: Arial, Helvetica, sans-serif;
+     display:flex;
+     flex-direction: column;
+     flex:1 0 auto;
+     height:100%;
+     margin: 0;
     .top-panel{
         padding-left:20px;
         padding-right: 20px;
@@ -45,7 +43,8 @@ body {
     .content{
         display:flex;
         flex-direction: row;
-        flex:1 1 auto;
+        flex:1 0 auto;
+        width: 100%
     }
     .side-part{
         background-color:grey;
@@ -54,40 +53,42 @@ body {
     
     .main-part{
         background-color:rgb(200, 200, 200);
-        width:100%;
-        padding-left: 32%;
-        padding-top: 50px;
         font-size: large;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex:1 0 auto;
+        .calculator{
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px;
+            grid-template-rows: 50px 50px 50px 50px 50px;
+            grid-gap: 2px;
+            border: 0;
+        }
+        .calculator *{
+            border: 0;
+        }
         .input{
+            grid-column-start: 1;
+            grid-column-end: 5;
             background-color:rgb(53, 53, 53);
-            height:30px;
-            width:207px;
             color:white;
         }
         .submit-button{
             background-color:rgb(255, 0, 0); 
-            height:30px;
-            width:50px;
         }
         .operator{
             background-color: orange;
-            height: 50px;
-            width: 50px;
         }
         .equals{
             background-color: aquamarine;
-            padding: 0;
-            height:50px;
-            width:50px;
         }
         .number{
-            height: 50px;
-            width: 50px;
             background-color: rgb(255, 255, 255);
         }
         .zero{
-            height:50px;
-            width: 105px;
+            grid-column-start:1;
+            grid-column-end: 3;
         }
     }
 }
