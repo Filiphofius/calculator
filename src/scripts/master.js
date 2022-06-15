@@ -1,4 +1,5 @@
 import '../styles/master.less';
+import './fractal';
 window.readValue = ()=>{
     window.value = parseInt(document.querySelector("input.input").value)
     console.log(value)

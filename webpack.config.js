@@ -77,6 +77,10 @@ function getPlugins(env) {
         new HtmlWebpackPlugin({
             template: './src/calculator.html',
             filename: 'calculator.html'
+          }),
+          new HtmlWebpackPlugin({
+            template: './src/fractal.html',
+            filename: 'fractal.html'
           })
     ];
     return plugins;
