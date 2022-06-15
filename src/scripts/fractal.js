@@ -1,9 +1,15 @@
 window.draw = (x,y,l,fa) =>{
     var c = document.getElementById("canvas");
+    var parent = c.parentElement;
+    c.width = parent.clientWidth;
+    
+    c.height = parent.clientWidth / 1.7;
+    window.sizefactor = c.width / 1000;
+    console.log(parent.clientWidth)
     var ctx = c.getContext("2d");
     ctx.clearRect(0,0,c.clientWidth,c.clientHeight)
     //ctx.beginPath();
-    fractal(x,y,l,45,ctx, fa, 20);
+    fractal(x * sizefactor,y * sizefactor,l * sizefactor,45,ctx, fa, 20);
     window.fractalLength= l;
     window.fractalAngle= fa;
     console.log(fractalAngle)
@@ -26,8 +32,8 @@ window.fractal= (x,y,l,a,ctx, fa, color) =>{
         ctx.lineTo(x2, y2);
         ctx.strokeStyle = "rgba(0, " + color + ", 0, 1)";
         ctx.stroke();
-        fractal(x3,y3,l-10,a-fa,ctx, fa, color + 20)
-        fractal(x4,y4,l-10,a+fa,ctx, fa, color + 20)
+        fractal(x3,y3,l-10 * sizefactor,a-fa,ctx, fa, color + 20)
+        fractal(x4,y4,l-10 * sizefactor,a+fa,ctx, fa, color + 20)
     }
 }
 window.slider = () =>{
